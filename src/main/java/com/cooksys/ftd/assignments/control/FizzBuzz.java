@@ -1,6 +1,7 @@
 package com.cooksys.ftd.assignments.control;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import com.cooksys.ftd.assignments.control.util.MissingImplementationException;
+
 
 /**
  * FizzBuzz is an old programming exercise.
@@ -26,7 +27,7 @@ public class FizzBuzz {
      * @throws IllegalArgumentException if b is zero
      */
     public static boolean divides(int a, int b) throws IllegalArgumentException {
-        throw new NotImplementedException();
+        throw new MissingImplementationException();
     }
 
     /**
@@ -41,7 +42,7 @@ public class FizzBuzz {
      * @return a message according to the format above, or null if n is not divisible by either 3 or 5
      */
     public static String message(int n) {
-        throw new NotImplementedException();
+        throw new MissingImplementationException();
     }
 
     /**
@@ -55,7 +56,7 @@ public class FizzBuzz {
      * @throws IllegalArgumentException if the given end is less than the given start
      */
     public static String[] messages(int start, int end) throws IllegalArgumentException {
-        throw new NotImplementedException();
+        throw new MissingImplementationException();
     }
 
     /**
@@ -63,7 +64,7 @@ public class FizzBuzz {
      * the relevant messages to sysout
      */
     public static void main(String[] args) {
-        throw new NotImplementedException();
+        throw new MissingImplementationException();
     }
 
 }

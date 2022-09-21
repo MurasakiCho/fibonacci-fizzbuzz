@@ -35,6 +35,11 @@ public class FizzBuzzTests {
         Assert.assertEquals("3: Fizz", FizzBuzz.message(3));
         Assert.assertEquals("5: Buzz", FizzBuzz.message(5));
         Assert.assertEquals("15: FizzBuzz", FizzBuzz.message(15));
+        Assert.assertEquals("6: Fizz", FizzBuzz.message(6));
+        Assert.assertEquals("9: Fizz", FizzBuzz.message(9));
+        Assert.assertEquals("30: FizzBuzz", FizzBuzz.message(30));
+        Assert.assertEquals("25: Buzz", FizzBuzz.message(25));
+        assertNull(FizzBuzz.message(11));
         assertNull(FizzBuzz.message(1));
     }
 
