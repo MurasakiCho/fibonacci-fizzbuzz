@@ -13,6 +13,7 @@ import com.cooksys.ftd.assignments.control.util.MissingImplementationException;
  * ...etc
  */
 public class Fibonacci {
+    private static int [] fibs;
 
     /**
      * Calculates the value in the Fibonacci sequence at a given index. For example,
@@ -24,7 +25,17 @@ public class Fibonacci {
      * @throws IllegalArgumentException if the given index is less than zero
      */
     public static int atIndex(int i) throws IllegalArgumentException {
-        throw new MissingImplementationException();
+
+        if(i < 0){
+            throw new IllegalArgumentException();
+        }
+
+        if (i == 0 || i == 1){
+            return 1;
+        }
+
+        return (fibs[i - 1]) + (fibs[i - 2]);
+
     }
 
     /**
@@ -38,7 +49,17 @@ public class Fibonacci {
      *                                  given end is less than the given start
      */
     public static int[] slice(int start, int end) throws IllegalArgumentException {
-        throw new MissingImplementationException();
+
+            if(start > end || start < 0){
+                throw new IllegalArgumentException();
+            }
+
+            for (int i = start; i < end; i++) {
+                fibs[i] = atIndex(i);
+            }
+
+            return fibs;
+
     }
 
     /**
@@ -49,6 +70,22 @@ public class Fibonacci {
      * @throws IllegalArgumentException if the given count is negative
      */
     public static int[] fibonacci(int count) throws IllegalArgumentException {
-        throw new MissingImplementationException();
+
+        if (count < 0){
+            throw new IllegalArgumentException();
+        }
+
+        fibs = new int[count];
+
+        return slice(0, count);
     }
+
+    public static void main(String[] args) {
+        int [] array = fibonacci(5);
+        for (int j : array) {
+            System.out.println(j);
+        }
+    }
+
 }
+
